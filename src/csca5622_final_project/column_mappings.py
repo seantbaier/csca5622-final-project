@@ -57,3 +57,26 @@ PRESCHOOL_ENROLLMENT_COLUMN_MAPPINGS = [
     # Percent of Schools Reporting
     "schools (P)",
 ]
+
+
+SCHOOL_INCIDENT_COLUMN_MAPPINGS = [
+    "C0",
+    "State",
+    # "Rape or attempted rape",
+    "Sexual assault",
+    "Robbery with a weapon",
+    "Robbery with a firearm or explosive",
+    "Robbery without a weapon",
+    "Physical attack or fight with a weapon",
+    "Physical attack or fight with a firearm or explosive device",
+    "Physical attack without a weapon",
+    "Threats of physical attack with a weapon",
+    "Threats of physical attack with a firearm or explosive device",
+    "Threats of physical attack without a weapon",
+    "Possession of a firearm or explosive device",
+    # Number of Schools
+    "schools",
+    # "Percent of Schools Reporting"
+    "schools (P)",
+    "C16",
+]

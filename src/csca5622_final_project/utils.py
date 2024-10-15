@@ -1,10 +1,15 @@
 import pandas as pd
 from pathlib import Path
+from typing import Optional
 
 BASE_PATH = Path.cwd().joinpath("../../data/")
 
 
-def load_excel(file_path: str, names: list[str]) -> pd.DataFrame:
+def load_excel(
+    file_path: str,
+    names: list[str],
+    drop_columns: Optional[list[str]],
+) -> pd.DataFrame:
     """
     Load an Excel file into a pandas DataFrame with specified column names.
 
@@ -59,7 +64,8 @@ def load_excel(file_path: str, names: list[str]) -> pd.DataFrame:
     )
 
     # -- Remove empty NaN column values
-    df.drop(["C0"], axis=1, inplace=True)
+    if columns_to_remove := drop_columns:
+        df.drop(columns_to_remove, axis=1, inplace=True)
 
     # -- Delete metadata text
     df.drop([52, 53, 54, 55], inplace=True)
